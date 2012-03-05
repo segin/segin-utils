@@ -1,0 +1,14 @@
+#summary A small utility to start programs as a daemon
+
+= Introduction =
+
+kshell is a simple utility to run a program as a daemon.
+Inspired after the KDE core utility of the same name, this program is a way of using the [http://www.kernel.org/doc/man-pages/online/pages/man3/daemon.3.html daemon(3)] function call easily from the shell. Although the daemon(3) syscall provides for changing the working directory to the filesystem root, /, we do not do that. 
+
+Similarly to it's KDE counterpart, kshell is meant to launch GUI programs from the shell in a better manner than just backgrounding them with &.
+
+kshell is highly portable, and will run on nearly any Unix-like operating system that provides the daemon(3) library call in it's libc.
+
+= Details =
+
+Usage: `kshell [command]` _`args ...`_
