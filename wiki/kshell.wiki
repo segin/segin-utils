@@ -16,4 +16,4 @@ Usage: `kshell [command]` _`args ...`_
 
 = Downloading = 
 
-kshell is available in Subversion in /trunk/kshell. It is always perfectly safe to download the trunk version, as 'kshell' is so small and simple (~40 lines of code!) that there is no need to worry about bugs. 
+kshell is available in Subversion in [http://code.google.com/p/segin-utils/source/browse/#svn%2Ftrunk%2Fkshell /trunk/kshell]. It is always perfectly safe to download the trunk version, as 'kshell' is so small and simple (~40 lines of code!) that there is no need to worry about bugs. 
