@@ -1,0 +1,16 @@
+#summary A utility to reset display orientation
+#labels Phase-Deploy
+
+= Introduction =
+
+{{{'screenup'}}} is a Windows program that does one thing, and it does it very well: It resets the orientation of your display to it's default setting.
+
+You can find a pre-compiled, ready-to-run executable in the [http://code.google.com/p/segin-utils/downloads/list Downloads page]. It doesn't need to install, it can run from anything (USB flash drive, network, RAM disk), and no news is good news
+
+= Details =
+
+Simply download and run screenup.exe from the Downloads section. 
+
+It is compiled as a console program. It only displays text if it encounters an error. If your display orientation/rotation settings are set to anything than "Normal" or "Landscape", it will reset them. Else it will do nothing (aside from making your screen flicker, as there is nothing to do.)
+
+There is NO WARRANTY. Source code can be found in the Subversion repository under [http://code.google.com/p/segin-utils/source/browse/#svn%2Ftrunk%2Fscreenup /trunk/screenup/].
