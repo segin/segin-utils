@@ -1,0 +1,27 @@
+#summary A CD-Key grabber for StarCraft and StarCraft: Brood War
+#labels Phase-Deploy,Featured
+
+= Introduction =
+
+`keygrab` is a simple command-line based CD-Key grabber for StarCraft and StarCraft: Brood War. It will work with any version of StarCraft starting with 1.15.1 and higher.
+
+= Details =
+
+To use `keygrab`, you will need to run it from the Command Prompt (`cmd.exe`). Provide the `-v` switch followed by a version number.
+
+The following version numbers are accepted:
+
+  * `1.15.1`
+  * `1.15.2`
+  * `1.15.2-alt` -- Use this if the normal 1.15.2 setting does not work for you.
+  * `1.15.3`
+  * `1.16.0`
+  * `1.16.1`
+
+`keygrab` should be invoked from the commandline like so:
+
+`keygrab -v 1.16.1`
+
+You will need a working Internet connection to use `keygrab`. `keygrab` itself does not use the Internet, instead, you will need to connect StarCraft to Battle.net. Once you are at the Battle.net login screen, switch programs via Alt+Tab to the Command Prompt and run `keygrab`. 
+
+If all is well, you will be presented with CD-Key used to install your copy of StarCraft. This is exceptionally useful in the case that your CD jewel case is somehow destroyed - in this case, I *_highly_* recommend registering your CD-Key with a Battle.net 2.0 account through the Battle.net website. This has the advantage of giving you StarCraft: Brood War for free if you don't already have the expansion :) 
