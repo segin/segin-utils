@@ -1,0 +1,3 @@
+[submodule "matwm2"]
+	path = matwm2
+	url = git@github.com:segin/matwm2.git
