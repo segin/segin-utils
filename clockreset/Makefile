@@ -8,6 +8,8 @@ RM      = rm -f
 CC	=  cc
 # Just add to, not replace CFLAGS
 CFLAGS  += -Os 
+# for modern Linux
+LDFLAGS	+= -lbsd
 
 # For Microsoft C:
 # CC    = cl.exe
