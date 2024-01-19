@@ -107,6 +107,7 @@ int main(int argc, char *argv[]) {
     int option;
     const char* xml_file_path = NULL;
     const char* csv_file_path = NULL;
+    const char* parse_type = NULL;
 
     // Check if the correct number of command-line arguments is provided
     if (argc != 7) {
@@ -118,14 +119,7 @@ int main(int argc, char *argv[]) {
     while ((option = getopt(argc, argv, "t:x:c:")) != -1) {
         switch (option) {
             case 't':
-                if (strcmp(optarg, "series") == 0) {
-                    parse_series_xml(xml_file_path, csv_file_path);
-                } else if (strcmp(optarg, "myshows") == 0) {
-                    parse_myshows_xml(xml_file_path, csv_file_path);
-                } else {
-                    fprintf(stderr, "Error: Invalid value for option -t\n");
-                    return 1;
-                }
+                parse_type = optarg;
                 break;
             case 'x':
                 xml_file_path = optarg;
@@ -137,6 +131,21 @@ int main(int argc, char *argv[]) {
                 fprintf(stderr, "Usage: %s -t <series|myshows> -x <path_to_xml_file> -c <path_to_csv_file>\n", argv[0]);
                 return 1;
         }
+    }
+
+    // Validate and call the appropriate parsing function
+    if (parse_type != NULL && xml_file_path != NULL && csv_file_path != NULL) {
+        if (strcmp(parse_type, "series") == 0) {
+            parse_series_xml(xml_file_path, csv_file_path);
+        } else if (strcmp(parse_type, "myshows") == 0) {
+            parse_myshows_xml(xml_file_path, csv_file_path);
+        } else {
+            fprintf(stderr, "Error: Invalid value for option -t\n");
+            return 1;
+        }
+    } else {
+        fprintf(stderr, "Usage: %s -t <series|myshows> -x <path_to_xml_file> -c <path_to_csv_file>\n", argv[0]);
+        return 1;
     }
 
     return 0;
