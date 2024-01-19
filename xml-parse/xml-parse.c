@@ -105,11 +105,11 @@ void parse_myshows_xml(const char* xml_file_path, const char* csv_file_path) {
 
 int main(int argc, char *argv[]) {
     int option;
-    const char* xml_file_path;
-    const char* csv_file_path;
+    const char* xml_file_path = NULL;
+    const char* csv_file_path = NULL;
 
     // Check if the correct number of command-line arguments is provided
-    if (argc != 5) {
+    if (argc != 7) {
         fprintf(stderr, "Usage: %s -t <series|myshows> -x <path_to_xml_file> -c <path_to_csv_file>\n", argv[0]);
         return 1;
     }
